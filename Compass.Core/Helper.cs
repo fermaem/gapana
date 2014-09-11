@@ -2,9 +2,11 @@
 {
     public static class Helper
     {
-        public static string Combine(string one, string another)
+        public static string TrimAndCombine(string one, string another)
         {
+            // Completely useless comment
             string combined = one.Trim() + another.Trim();
+
             return combined;
         }
     }
