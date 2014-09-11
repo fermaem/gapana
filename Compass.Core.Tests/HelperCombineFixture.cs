@@ -1,13 +1,16 @@
 ﻿using Xunit;
+using Xunit.Extensions;
 
 namespace Compass.Core.Tests
 {
     public class HelperCombineFixture
     {
-        [Fact]
-        public void CanCombineTwoStrings()
+        [Theory]
+        [InlineData("ab", "a", "b")]
+        [InlineData("b", "", "b")]
+        public void CanCombineTwoStrings(string expected, string one, string another)
         {
-            Assert.Equal("ab", Helper.Combine("a", "b"));
+            Assert.Equal(expected, Helper.Combine(one, another));
         }
     }
 }
