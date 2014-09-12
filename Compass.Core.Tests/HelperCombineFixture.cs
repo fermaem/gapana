@@ -7,7 +7,8 @@ namespace Compass.Core.Tests
         [Fact]
         public void CanCombineTwoStrings()
         {
-            Assert.Equal("ab", Helper.Combine("a", "b"));
+            Assert.Equal("ab", Helper.TrimAndCombine("a", "c"));
+            //Completely unrelated fix
         }
     }
 }
